@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Bengal Fan
+description: from hignest mountain to the deep sea
+img: assets/img/Bengal_Fan_Geo.png
 importance: 1
 category: work
 related_publications: true
