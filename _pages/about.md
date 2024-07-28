@@ -1,25 +1,65 @@
 ---
-layout: about
-title: About
+layout: page
 permalink: /
-subtitle: 
+nav:
 
-profile:
-  align: center
-  image: avatar.jpg
-  image_circular: true # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-news: false # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+<!--description: <a href="https://ai.google/" target="_blank">Google AI</a> -->
+address: <a href="https://www.google.com/maps/place/Googleplex/@37.4220656,-122.0862837,17z/data=!3m1!4b1!4m5!3m4!1s0x808fba02425dad8f:0x6c296c66619367e0!8m2!3d37.4220656!4d-122.0840897" class="page-description" target="_blank">Mountain View, California, USA </a>
 ---
-I want to make some tests here.
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<div class="col p-0 pt-4 pb-4">
+  <h1 class="pb-3 title text-left font-weight-bold">Zijie Gao</h1>
+  <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.description }}</h6>
+  {% if page.address %}
+      <h6 class="m-0 mb-2" style="font-size: 0.83em;">{{ page.address }}</h6>
+  {% endif %}
+</div>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<!-- Introduction -->
+
+<div style="display: flex; flex-wrap: wrap;">
+    <div class="text-justify p-0">
+        <div class="col-xs-12 col-sm-6 p-0 pt-2 pb-sm-2 pb-4 pl-sm-4 text-center" style="float: right;">
+          <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" style="width: 300px; height: auto;">
+        </div>
+
+
+        <p>
+            I am a Senior Research Scientist at <a href="https://ai.google/" target="_blank">Google Research</a> in Mountain View, California, working on machine learning research.
+        </p>
+        
+        <p>
+            Previously, I was a PhD student in the <a href="http://www.ml.cmu.edu/" target="_blank">Machine Learning Department</a> at <a href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>, co-advised by <a href="http://www.cs.cmu.edu/~tom/" target="_blank">Tom Mitchell</a> and <a href="http://www.cs.cmu.edu/~bapoczos/" target="_blank">Barnabàs Pòczos</a>.
+            My PhD research focused on developing algorithms for machine learning, mainly focused on semi-supervised learning, curriculum learning, multitask learning, and graph-based problems.
+            I am also passionate about applying machine learning methods in neuroscience, in order to study how the brain understands language and controls speech.
+            Previously, I did some research in Computer Vision, with the goal of detecting and tracking objects in videos.
+        </p>
+    </div>
+</div>
+
+<div class="col text-justify p-0">
+    <p>
+        Before I joined CMU, I graduated with an <a href="https://www.cst.cam.ac.uk/admissions/acs" target="_blank">M.Phil. in Advanced Computer Science</a>
+        from the <a href="https://www.cam.ac.uk/" target="_blank">University of Cambridge</a>, UK.
+        In my Master's thesis I used Machine Learning methods to detect and align chromosomes in microscope images,
+        advised by <a href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">Pietro Lió</a>.
+    </p>
+</div>
+
+<!-- News -->
+<div class="news mt-3 p-0">
+  <h1 class="title mb-4 p-0">news</h1>
+  {% assign news = site.news | reverse %}
+  {% for item in news limit: site.news_limit %}
+    <div class="row p-0">
+      <div class="col-sm-2 p-0">
+        <span class="badge light-green darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+          {{ item.date | date: "%b %-d, %Y" }}
+        </span>
+      </div>
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+        <p>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
