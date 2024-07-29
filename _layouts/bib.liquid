@@ -1,6 +1,21 @@
----
----
-<div class="row">
+
+<style>
+  .publication-item {
+    font-size: 1.1em;
+  }
+  .publication-item .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    width: auto;
+  }
+  .publication-item .author {
+    font-size: 1.1em;
+  }
+</style>
+
+<div class="row publication-item">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -154,7 +169,7 @@
       {% if entry.google_scholar_id %}
         {% assign entry_has_google_scholar_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge %}
+      {% if entry_has_altmetric_badge or entry.has_dimensions_badge or entry.has_google_scholar_badge %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -170,9 +185,9 @@
               {% elsif entry.doi %}
                 data-doi="{{ entry.doi }}"
               {% elsif entry.pmid %}
-                data-pmid="{{ entry.pmid }}"
+                data-pmid="{{ entry.pmid }}
               {% elsif entry.isbn %}
-                data-isbn="{{ entry.isbn }}"
+                data-isbn="{{ entry.isbn }}
               {% endif %}
             ></span>
           {% endif %}
@@ -216,7 +231,7 @@
 
     {% if entry.abstract %}
       <!-- Hidden abstract block -->
-      <div class="abstract hidden">
+      <div id="{{ entry.key }}-abstract" class="collapse">
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}

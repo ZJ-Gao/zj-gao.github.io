@@ -28,8 +28,11 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: $max-content-width;
+  max-width: 1300px; // You can adjust this value to control the maximum width
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
 
 // Profile
 .profile {
