@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /
-nav:
+# title: about
+nav: false
 
 <!--description: <a href="https://ai.google/" target="_blank">Google AI</a> -->
 address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95.2921264,13z/data=!3m1!4b1!4m6!3m5!1s0x87bf40c7ce479883:0x151713d50478ab2e!8m2!3d38.9716689!4d-95.2352501!16zL20vMHQ2aGs?entry=ttu" class="page-description" target="_blank">Lawrence, KS, USA </a>
