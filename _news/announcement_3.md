@@ -1,7 +1,5 @@
 ---
 layout: page
-date: 2016-01-15 07:59:00-0400
-inline: true
+date: 2024-04-16
 ---
-
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Received the Geological Society - Lodon Research Grant!
