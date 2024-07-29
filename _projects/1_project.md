@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bengal Fan
-description: from hignest mountain to the deep sea
+description: from the hignest mountain to the deep sea
 img: assets/img/Bengal_Fan_Geo.png
 importance: 1
 category: work
