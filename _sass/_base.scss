@@ -19,6 +19,15 @@ strong {
   color: var(--global-text-color);
 }
 
+// Set the base font size for the body
+body {
+  font-size: 1.1rem; // Adjusted size for the whole document
+}
+// Adjust font size for h6
+h6 {
+  font-size: 1.1em;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -26,7 +35,7 @@ hr {
 table {
   td,
   th {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   th {
