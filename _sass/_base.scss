@@ -646,6 +646,8 @@ footer.sticky-bottom {
 
 // Publications
 
+// Publications
+
 .publications {
   margin-top: 2rem;
 
@@ -667,7 +669,7 @@ footer.sticky-bottom {
 
   h2.bibliography {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
+    border-top: 2px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
     text-align: right;
@@ -686,6 +688,7 @@ footer.sticky-bottom {
 
       .abbr {
         margin-bottom: 0.5rem;
+        padding-top: 10px; /* Add upper padding to align with title */
 
         abbr {
           display: inline-block;
@@ -710,7 +713,14 @@ footer.sticky-bottom {
       .title {
         font-weight: bolder;
         font-family: "Roboto Slab", "Times New Roman", serif;
+        width: 700px; /* Adjusted width */
+        padding-left: 0px; /* Adjust padding to center title within container */
+        padding-right: 0px; /* Adjust padding to center title within container */
+        padding-top: 10px; /* Add upper padding */
+        margin-left: auto;
+        margin-right: auto;
       }
+      
 
       .author {
         a {
@@ -822,6 +832,7 @@ footer.sticky-bottom {
     }
   }
 }
+
 
 // Rouge Color Customization
 figure.highlight {
