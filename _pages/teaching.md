@@ -9,8 +9,6 @@ nav_order: 6
 
 ---
 
-### **Graduate Teaching Assistant**
-
 | Course                                      |        |        | Term                     |
 |---------------------------------------------|--------|--------|--------------------------:|
 | GEOL 541 Geomorphology Lab                  |        |        | 2023 Fall                |
@@ -21,3 +19,22 @@ nav_order: 6
 | GEOL 302 Oceanography Lab                   |        |        | 2019 Fall                |
 
 
+<h3 class="mt-4">University of Kansas</h3>
+
+<div class="card mt-3">
+  <div class="p-3">
+    <div class="row">
+      <div class="col-sm-10">
+        <h5 class="font-weight-bold">Geomorphology</h5>
+      </div>
+      <div class="col-sm-2 text-left text-sm-right">
+        <span class="badge font-weight-bold light-green darken-1 text-uppercase align-middle"  href="https://www.cs.cmu.edu/~pradeepr/courses/701/2018-spring/" target="_blank">
+            GEOL 541 
+        </span>
+      </div>
+    </div>
+    <h6 class="font-italic mt-2 mt-sm-0">2023 Fall Graduate Teaching Assistant</h6>
+    <ul class="card-text font-weight-light list-group list-group-flush">
+      <li class="list-group-item">○ Senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Prof. Mike Blum</a>.
+      <li class="list-group-item">○  mentored and evaluated groups of students working on labs, posters, and presentations.</li>
+      <li class="list-group-item">○ I helped organize and manage class fieldtrip in Nebraska and Colorado</li>
