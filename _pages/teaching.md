@@ -28,13 +28,21 @@ nav_order: 6
         <h5 class="font-weight-bold">Geomorphology</h5>
       </div>
       <div class="col-sm-2 text-left text-sm-right">
-        <span class="badge font-weight-bold light-green darken-1 text-uppercase align-middle"  href="https://www.cs.cmu.edu/~pradeepr/courses/701/2018-spring/" target="_blank">
-            GEOL 541 
+        <span class="badge font-weight-bold light-green darken-1 text-uppercase align-middle" href="https://www.cs.cmu.edu/~pradeepr/courses/701/2018-spring/" target="_blank">
+          GEOL 541
         </span>
       </div>
     </div>
     <h6 class="font-italic mt-2 mt-sm-0">2023 Fall Graduate Teaching Assistant</h6>
     <ul class="card-text font-weight-light list-group list-group-flush">
       <li class="list-group-item">○ Senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Prof. Mike Blum</a>.
-      <li class="list-group-item">○  mentored and evaluated groups of students working on labs, posters, and presentations.</li>
+      </li>
+      <li class="list-group-item">○ mentored and evaluated groups of students working on labs, posters, and presentations.</li>
       <li class="list-group-item">○ I helped organize and manage class fieldtrip in Nebraska and Colorado</li>
+    </ul>
+  </div>
+</div>
+<!-- Add a space here with a div -->
+<div style="margin-top: 30px;"></div>
+<!-- Include your map script -->
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=elLjnxArMxaUFVlC1ESNwWFWrosz66VWK_rMIDS4gj0&cl=ffffff&w=a"></script>
