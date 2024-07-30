@@ -18,32 +18,22 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 <!-- Introduction -->
 
-<div style="display: flex; flex-wrap: wrap;">
-    <div class="text-justify p-0">
-        <div class="col-xs-12 col-sm-6 p-0 pt-2 pb-sm-2 pb-4 pl-sm-4 text-center" style="float: right;">
-          <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" style="width: 300px; height: auto;">
-        </div>
-
-
-        <p>
-            I am a Senior Research Scientist at <a href="https://ai.google/" target="_blank">Google Research</a> in Mountain View, California, working on machine learning research.
-        </p>
-        
-        <p>
-            Previously, I was a PhD student in the <a href="http://www.ml.cmu.edu/" target="_blank">Machine Learning Department</a> at <a href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>, co-advised by <a href="http://www.cs.cmu.edu/~tom/" target="_blank">Tom Mitchell</a> and <a href="http://www.cs.cmu.edu/~bapoczos/" target="_blank">Barnabàs Pòczos</a>.
-            My PhD research focused on developing algorithms for machine learning, mainly focused on semi-supervised learning, curriculum learning, multitask learning, and graph-based problems.
-            I am also passionate about applying machine learning methods in neuroscience, in order to study how the brain understands language and controls speech.
-            Previously, I did some research in Computer Vision, with the goal of detecting and tracking objects in videos.
-        </p>
-    </div>
+<div style="float: right; margin-left: 20px; margin-bottom: 10px;">
+  <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Image" style="width: 300px; height: auto;">
 </div>
+
+
+<p>
+  I am a PhD student at the <a href="https://geo.ku.edu/" target="_blank">Geology Department</a> of the <a href="https://www.ku.edu/" target="_blank">University of Kansas (KU) </a> in Lawrence, KS, advised by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Dr. Mike Blum</a>, and co-advised by <a href="https://www.researchgate.net/profile/Jennifer-Pickering" target="_blank">Dr. Jennifer Pickering</a> from the <a href="https://caeser.memphis.edu/" target="_blank">CAESER University of Memphis</a>. My dissertation seeks to develop Python-based visualization methods to highlight turbidites and their interbedding relationships in core samples. By analyzing IODP 354 cores through the lens of turbidite, my work strives to unravel both external controls and autogenic processes shaping the evolution of the Bengal Fan during the Pleistocene with a data-driven method.
+</p>
+
+<p>
+  Previously, I was a master student at the Geology Department of KU, where I attempted to synthesize dolomite and very-high-magnesium calcite under pressurized conditions with <a href="https://geo.ku.edu/people/jennifer-roberts" target="_blank">Dr. Jennifer Roberts</a>.
+</p>
 
 <div class="col text-justify p-0">
     <p>
-        Before I joined CMU, I graduated with an <a href="https://www.cst.cam.ac.uk/admissions/acs" target="_blank">M.Phil. in Advanced Computer Science</a>
-        from the <a href="https://www.cam.ac.uk/" target="_blank">University of Cambridge</a>, UK.
-        In my Master's thesis I used Machine Learning methods to detect and align chromosomes in microscope images,
-        advised by <a href="https://www.cl.cam.ac.uk/~pl219/" target="_blank">Pietro Lió</a>.
+      Before I joined KU, I graduated with a B.E. in Resource Exploration Engineering from the <a href="https://www.cup.edu.cn/pub/xyyww/collegeofgeosciences/introduction/index.htm" target="_blank">College of Geoscience, China University of Petroleum-Beijing</a> . During my time there, I discovered my passion for sedimentology as a career path. Participating in numerous mathematical modeling competitions helped me become a great team player and sparked my preference for solving geological questions with data-driven quantitative methods instead of relying on published models. Additionally, my involvement in various volunteering and community outreach activities ignited my interest in designing and teaching geology courses for students with different levels of prior knowledge.
     </p>
 </div>
 
