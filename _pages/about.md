@@ -18,8 +18,8 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 <!-- Introduction -->
 
-<div style="float: right; margin-left: 20px; margin-bottom: 10px;">
-  <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Image" style="width: 300px; height: auto;">
+<div style="float: right; margin-left: 20px; margin-bottom: 10px; max-width: 100%; text-align: center;">
+  <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Image" style="width: 300px; height: auto; max-width: 100%;">
 </div>
 
 

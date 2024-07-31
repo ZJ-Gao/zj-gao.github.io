@@ -14,9 +14,7 @@ email: zgao@ku.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zijie Gao's Personal Website Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Zijie Gao, Zijie, ZJ, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Zijie Gao, Zijie, ZJ Gao, ZJ, Zijie Gao Geology, ZJ Geology, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
