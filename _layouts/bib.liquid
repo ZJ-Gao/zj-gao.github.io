@@ -1,16 +1,19 @@
 <style>
   .publication-item {
-    font-size: 1.15em;
+    width: 700px;
+    font-size: 1em;
   }
   .publication-item .title {
-    font-size: 1.15m;
+    font-size: 1m;
     font-weight: bold;
     white-space: normal;
     word-wrap: break-word;
-    width: auto;
+    width: 700px;
   }
   .publication-item .author {
     font-size: 1em;
+    width: 700px;
+
   }
 </style>
 
@@ -67,7 +70,7 @@
     <div class="author">
       {% for author in entry.author_array %}
         {% assign full_name = author.first | append: ' ' | append: author.last %}
-        {% if full_name == "Zijie Gao" %}
+        {% if full_name == "Zijie Gao" or full_name == "Zijie Gao*"%}
           <nobr><strong style="color: green;">{{ full_name }}</strong></nobr>
         {% else %}
           <nobr>{{ full_name }}</nobr>

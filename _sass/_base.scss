@@ -382,7 +382,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2.5rem;
 
     a {
       i::before {
@@ -660,6 +660,7 @@ footer.sticky-bottom {
 .publications {
   margin-top: 2rem;
 
+
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -688,37 +689,37 @@ footer.sticky-bottom {
     list-style: none;
     padding: 0;
     margin-top: 0;
-
+  
     li {
       margin-bottom: 1rem;
-
+  
       .preview {
       }
-
+  
       .abbr {
         margin-bottom: 0.5rem;
         padding-top: 10px; /* Add upper padding to align with title */
-
+  
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
           margin-bottom: 0.5rem;
-
+  
           a {
             color: white;
-
+  
             &:hover {
               text-decoration: none;
             }
           }
         }
-
+  
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }
       }
-
+  
       .title {
         font-weight: bolder;
         font-family: "Roboto Slab", "Times New Roman", serif;
@@ -729,35 +730,47 @@ footer.sticky-bottom {
         margin-left: auto;
         margin-right: auto;
       }
-      
-
+  
       .author {
+        padding-left: 0px; /* Adjust padding to center within container */
+        padding-right: 0px; /* Adjust padding to center within container */
+        margin-left: auto;
+        margin-right: auto;
+  
         a {
           border-bottom: 1px dashed var(--global-theme-color);
-
+  
           &:hover {
             border-bottom-style: solid;
             text-decoration: none;
           }
         }
-
+  
         > em {
           border-bottom: 1px solid;
           font-style: normal;
         }
-
+  
         > span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
-
+  
           &:hover {
             color: var(--global-text-color);
             border-bottom: 1px dashed var(--global-text-color);
           }
         }
       }
-
+  
+      .publication-info {
+        padding-left: 0px; /* Adjust padding to center within container */
+        padding-right: 0px; /* Adjust padding to center within container */
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic; /* Make publication information italic */
+      }
+  
       .links {
         a.btn {
           color: var(--global-text-color);
@@ -767,7 +780,7 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
-
+  
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
@@ -777,7 +790,7 @@ footer.sticky-bottom {
           border-color: var(--global-highlight-color);
         }
       }
-
+  
       .badges {
         padding-bottom: 0.5rem;
         span {
@@ -786,13 +799,13 @@ footer.sticky-bottom {
           height: 100%;
           padding-right: 0.5rem;
           vertical-align: middle;
-
+  
           &:hover {
             text-decoration: underline;
           }
         }
       }
-
+  
       .hidden {
         font-size: 0.875rem;
         max-height: 0px;
@@ -803,19 +816,19 @@ footer.sticky-bottom {
         -ms-transition: 0.15s ease;
         -o-transition: 0.15s ease;
         transition: all 0.15s ease;
-
+  
         p {
           line-height: 1.4em;
           margin: 10px;
         }
-
+  
         pre {
           font-size: 1em;
           line-height: 1.4em;
           padding: 10px;
         }
       }
-
+  
       .hidden.open {
         max-height: 100em;
         transition-property: 0.15s ease;
@@ -824,23 +837,26 @@ footer.sticky-bottom {
         -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
-
+  
       div.abstract.hidden {
         border: dashed 1px var(--global-bg-color);
       }
-
+  
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
     }
+  
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
+  
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
   }
-}
+  
+  
 
 
 // Rouge Color Customization
