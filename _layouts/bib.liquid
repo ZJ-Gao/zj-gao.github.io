@@ -1,16 +1,7 @@
 <style>
   .publication-item {
     font-size: 1.15em;
-  }
-  .publication-item .title {
-    font-size: 1.15m;
-    font-weight: bold;
-    white-space: normal;
     word-wrap: break-word;
-    width: auto;
-  }
-  .publication-item .author {
-    font-size: 1em;
   }
 </style>
 
@@ -60,7 +51,7 @@
   {% endif %}
 
 <!-- Entry bib key -->
-<div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+<div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
   <!-- Title -->
   <div class="title">{{ entry.title }}</div>
   <!-- Author -->
