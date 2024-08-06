@@ -23,13 +23,18 @@ strong {
 body {
   font-size: 1.1rem; // Adjusted size for the whole document
 }
-// Adjust font size for h6
+// Adjust font size for h2
+h2 {
+  font-size: 2em;
+  color: black;
+}
+
 h6 {
   font-size: 1.1em;
 }
 
 hr {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 2px solid var(--global-text-color);
 }
 
 table {
@@ -677,8 +682,9 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 2px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    font-weight: 300;
+    border-top: 2px solid var(--global-text-color);
     padding-top: 1rem;
     margin-top: 2rem;
     text-align: right;
