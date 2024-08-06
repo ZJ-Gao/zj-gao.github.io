@@ -45,4 +45,4 @@ nav_order: 6
 <!-- Add a space here with a div -->
 <div style="margin-top: 30px;"></div>
 <!-- Include your map script -->
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=elLjnxArMxaUFVlC1ESNwWFWrosz66VWK_rMIDS4gj0&cl=ffffff&w=a"></script>
+<script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=71a93e&w=400&t=n&d=BLtgjhphkM5pDoF9xkct-owfCaYFuq22zOjMFXzOT-4&co=ffffff&cmo=ff9933&cmn=ff9933'></script>
