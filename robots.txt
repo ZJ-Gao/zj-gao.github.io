@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://zj-gao.github.io/zj_web/sitemap.xml
+Sitemap: https://zj-gao.github.io/sitemap.xml
