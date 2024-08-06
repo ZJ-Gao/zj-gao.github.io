@@ -160,15 +160,15 @@
 </script>
 
 
-    <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+<!-- Journal/Book title and date -->
+    {%- assign proceedings = 'inproceedings,incollection' | split: ',' -%}
+    {%- assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' -%}
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture %}
+      {%- capture entrytype %}<em>In {{entry.booktitle}}</em> {% endcapture -%}
     {% elsif thesis contains entry.type %}
-      {% capture entrytype %}<em>{{entry.school}}</em> {% endcapture %}
+      {%- capture entrytype %}<em>{{entry.school}}</em> {% endcapture -%}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -196,6 +196,7 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -236,52 +237,41 @@
         <a class="badge grey waves-effect font-weight-light mr-1" href="{{ entry.video }}" target="_blank">Video</a>
       {% endif %}
     </div>
-    {% if site.enable_publication_badges %}
-      {% assign entry_has_altmetric_badge = false %}
-      {% if entry.altmetric and entry.altmetric != 'false' %}
-        {% assign entry_has_altmetric_badge = true %}
-      {% endif %}
-
-      {% assign entry_has_dimensions_badge = false %}
-      {% if entry.dimensions and entry.dimensions != 'false' %}
-        {% assign entry_has_dimensions_badge = true %}
-      {% endif %}
-
-      {% assign entry_has_google_scholar_badge = false %}
-      {% if entry.google_scholar_id %}
-        {% assign entry_has_google_scholar_badge = true %}
-      {% endif %}
-      {% if entry_has_altmetric_badge or entry.has_dimensions_badge or entry.has_google_scholar_badge %}
+ {% if site.enable_publication_badges %}
+      {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
+      {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
+      {% assign entry_has_google_scholar_badge = entry.google_scholar_id %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
               class="altmetric-embed"
+              data-hide-no-mentions="true"
+              data-hide-less-than="15"
               data-badge-type="2"
               data-badge-popover="right"
-              {% if entry.altmetric != blank and entry.altmetric != 'true' %}
-                data-altmetric-id="{{ entry.altmetric }}"
-              {% elsif entry.arxiv %}
-                data-arxiv-id="{{ entry.arxiv }}"
-              {% elsif entry.eprint %}
+              {% if entry.eprint %}
                 data-arxiv-id="{{ entry.eprint }}"
               {% elsif entry.doi %}
                 data-doi="{{ entry.doi }}"
+              {% elsif entry.altmetric %}
+                data-altmetric-id="{{ entry.altmetric }}"
               {% elsif entry.pmid %}
-                data-pmid="{{ entry.pmid }}
+                data-pmid="{{ entry.pmid }}"
               {% elsif entry.isbn %}
-                data-isbn="{{ entry.isbn }}
+                data-isbn="{{ entry.isbn }}"
               {% endif %}
             ></span>
           {% endif %}
           {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <span
               class="__dimensions_badge_embed__"
-              {% if entry.dimensions != blank and entry.dimensions != 'true' %}
-                data-id="{{ entry.dimensions }}"
-              {% elsif entry.doi %}
+              {% if entry.doi %}
                 data-doi="{{ entry.doi }}"
               {% else %}
                 data-pmid="{{ entry.pmid }}"
+              {% else %}
+                data-id="{{ entry.dimensions }}"
               {% endif %}
               data-hide-zero-citations="true"
               data-style="small_rectangle"
