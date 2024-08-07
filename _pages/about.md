@@ -46,7 +46,7 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
     <div class="row p-0">
       <div class="col-sm-2 p-0">
         <span class="badge light-green darken-1 font-weight-bold text-uppercase align-middle date ml-3">
-          {{ item.date | date: "%b %-d, %Y" }}
+          {{ item.date | date: "%b  %Y" }}
         </span>
       </div>
       <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
@@ -55,3 +55,4 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
     </div>
   {% endfor %}
 </div>
+
