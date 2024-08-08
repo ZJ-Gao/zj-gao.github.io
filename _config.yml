@@ -6,7 +6,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Zijie Gao's Research Site # the website title (if blank, full name will be used instead)
 first_name: ZJ
 middle_name: 
 last_name: Gao
@@ -14,7 +14,7 @@ email: zgao@ku.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zijie Gao's Personal Website Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-keywords: Zijie Gao, Zijie, ZJ Gao, ZJ, Zijie Gao Geology, ZJ Geology, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: Zijie Gao, Zijie, ZJ Gao, ZJ, Zijie Gao Geology, ZJ Gao Geology, Zijie Gao website, ZJ Gao website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
