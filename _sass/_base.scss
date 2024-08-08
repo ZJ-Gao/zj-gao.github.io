@@ -849,6 +849,10 @@ footer.sticky-bottom {
   }
 }
 
+.highlight-author {
+  color: green;
+  font-weight: 500; /* Ensure no underline for the specified author */
+}
 
 // Rouge Color Customization
 figure.highlight {
