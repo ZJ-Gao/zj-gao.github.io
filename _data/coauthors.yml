@@ -1,6 +1,6 @@
 "pickering":
   - firstname: ["Jennifer", "J."]
-    url: https://www.researchgate.net/profile/Jennifer-Pickering
+    url: https://scholar.google.com/citations?user=re03tZQAAAAJ&hl=en&oi=ao
 
 "blum":
   - firstname: ["Mike", "M.", "Michael"]
@@ -10,3 +10,10 @@
   - firstname: ["Nathan", "N."]
     url: https://en.wikipedia.org/wiki/Nathan_Rosen
 
+"zhu":
+  - firstname: ["Xiaomin", "X."]
+    url: https://www.researchgate.net/profile/Xiaomin-Zhu-2
+
+"zhu":
+  - firstname: ["Shifa", "S."]
+    url: https://www.researchgate.net/profile/Shifa-Zhu

@@ -77,3 +77,8 @@
     - year: 2016
       items:
         - China National Scholarship
+- title: Note
+  type: map
+  contents:
+    - name: Full Version CV
+      value: Click the PDF icon at the top right
