@@ -35,10 +35,10 @@ nav_order: 6
     </div>
     <h6 class="font-italic mt-2 mt-sm-0">2023 Fall Graduate Teaching Assistant</h6>
     <ul class="card-text font-weight-light list-group list-group-flush">
-      <li class="list-group-item">○ Senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Prof. Mike Blum</a>.
+      <li class="list-group-item">○ Assisted senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Prof. Mike Blum</a>.
       </li>
-      <li class="list-group-item">○ mentored and evaluated groups of students working on labs, posters, and presentations.</li>
-      <li class="list-group-item">○ I helped organize and manage class fieldtrip in Nebraska and Colorado</li>
+      <li class="list-group-item">○ Mentored and evaluated groups of students working on labs, posters, and presentations.</li>
+      <li class="list-group-item">○ Helped organize and manage class fieldtrip in Nebraska and Colorado</li>
     </ul>
   </div>
 </div>
