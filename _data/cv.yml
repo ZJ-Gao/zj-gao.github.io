@@ -9,7 +9,8 @@
       value: zgao@ku.edu
     - name: Languages
       value: English, Chinese
-
+    - name: Hobbies
+      value: Badminton, tennis, hiking, cooking, visiting historical museums, reading and writing near a window with scenic views, and working on projects together with friends!
 - title: Education
   type: time_table
   contents:
