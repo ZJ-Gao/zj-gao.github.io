@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Projects I'm working on
 nav: true
 nav_order: 3
 display_categories: [Current Projects, Past Projects]
