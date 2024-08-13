@@ -57,4 +57,3 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
     </div>
   {% endfor %}
 </div>
-
