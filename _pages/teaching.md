@@ -19,26 +19,31 @@ nav_order: 6
 | GEOL 302 Oceanography Lab                   |        |        | 2019 Fall                |
 
 
-<h3 class="mt-4">University of Kansas</h3>
+<h3 class="mt-4" style="background-color: var(--global-bg-color);">University of Kansas</h3>
 
-<div class="card mt-3">
-  <div class="p-3">
+<div class="card mt-3" style="background-color: var(--global-bg-color);">
+  <div class="p-3" style="background-color: var(--global-bg-color);">
     <div class="row">
       <div class="col-sm-10">
-        <h5 class="font-weight-bold">Geomorphology</h5>
+        <h5 class="font-weight-bold" style="color: var(--global-text-color);">Geomorphology</h5>
       </div>
       <div class="col-sm-2 text-left text-sm-right">
-        <span class="badge font-weight-bold light-green darken-1 text-uppercase align-middle" href="https://www.cs.cmu.edu/~pradeepr/courses/701/2018-spring/" target="_blank">
+        <span class="badge font-weight-bold text-uppercase align-middle" style="background-color: var(--global-theme-color); color: var(--global-card-bg-color);">
           GEOL 541
         </span>
       </div>
     </div>
-    <h6 class="font-italic mt-2 mt-sm-0">2023 Fall Graduate Teaching Assistant</h6>
-    <ul class="card-text font-weight-light list-group list-group-flush">
-      <li class="list-group-item">○ Assisted senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Prof. Mike Blum</a>.
+    <h6 class="font-italic mt-2 mt-sm-0" style="color: var(--global-text-color);">2023 Fall Graduate Teaching Assistant</h6>
+    <ul class="card-text font-weight-light list-group list-group-flush" style="background-color: var(--global-bg-color); color: var(--global-text-color);">
+      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+        Assisted senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank" style="color: var(--global-text-color);">Prof. Mike Blum</a>.
       </li>
-      <li class="list-group-item">○ Mentored and evaluated groups of students working on labs, posters, and presentations.</li>
-      <li class="list-group-item">○ Helped organize and manage class fieldtrip in Nebraska and Colorado</li>
+      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+        Mentored and evaluated groups of students working on labs, posters, and presentations.
+      </li>
+      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+        Helped organize and manage class field trip in Nebraska and Colorado.
+      </li>
     </ul>
   </div>
 </div>
