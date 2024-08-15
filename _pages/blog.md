@@ -188,8 +188,3 @@ pagination:
 {% endif %}
 
 </div>
-
-<!-- Embed the JavaScript here with a container -->
-<div style="width: 100px; height: 100px; overflow: hidden;">
-  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=E-fPxxIJcaSFSGIyrQvjTaBRa1wH0-S-TVu8Uk-Lmyw"></script>
-</div>
