@@ -27,7 +27,11 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 
 <p>
-  I am a PhD student at the <a href="https://geo.ku.edu/" target="_blank">Geology Department</a> of the <a href="https://www.ku.edu/" target="_blank">University of Kansas (KU) </a> in Lawrence, KS, advised by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Dr. Mike Blum</a>, and co-advised by <a href="https://scholar.google.com/citations?user=re03tZQAAAAJ&hl=en&oi=ao" target="_blank">Dr. Jenn Pickering</a> from the <a href="https://caeser.memphis.edu/" target="_blank">CAESER University of Memphis</a>. My dissertation seeks to develop Python-based visualization methods to highlight turbidites and their interbedding relationships in core samples. By analyzing IODP 354 cores through the lens of turbidite, my work strives to unravel both external controls and autogenic processes shaping the evolution of the Bengal Fan during the Pleistocene with a data-driven method.
+  I am a PhD student at the <a href="https://geo.ku.edu/" target="_blank">Geology Department</a> of the <a href="https://www.ku.edu/" target="_blank">University of Kansas (KU) </a> in Lawrence, KS, advised by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Dr. Mike Blum</a>, and co-advised by <a href="https://scholar.google.com/citations?user=re03tZQAAAAJ&hl=en&oi=ao" target="_blank">Dr. Jenn Pickering</a> from the <a href="https://caeser.memphis.edu/" target="_blank">CAESER University of Memphis</a>. My Ph.D. dissertation focuses on the sediment gravity flow (SGF) deposits recovered by IODP 354 Bengal Fan to investigate: 1) characteristics of the SGFs, especially their thickness distributions, 2) mechanisms that ignited and drove the transport of these relatively coarse sediments to the deep-sea coring sites, and 3) the timing of deposition for SGFs using Infrared-Stimulated Luminescence (IRSL) to provide numerical age estimates that can constrain the timing of individual SGF deposition. 
+  </p>
+
+  <p>
+  I am also working on a side project that leverages machine learning techniques to segment geological images, supporting quantitative percentage calculations. I’ve experimented with both siliciclastic thin sections and SEM images, with the most promising results and potential for publication coming from the SEM images. I welcome and appreciate any form of discussion or collaboration on applying machine learning in geology!
 </p>
 
 <p>
@@ -42,16 +46,18 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 <!-- News -->
 <div class="news mt-3 p-0">
-  <h1 class="title mb-4 p-0">news</h1>
+  <h1 class="title mb-4 p-0" style="color: var(--global-text-color);">news</h1>
   {% assign news = site.news | reverse %}
   {% for item in news limit: site.news_limit %}
     <div class="row p-0">
       <div class="col-sm-2 p-0">
-        <span class="badge light-green darken-1 font-weight-bold text-uppercase align-middle date ml-3">
+        <span class="badge font-weight-bold text-uppercase align-middle date ml-3" 
+              style="background-color: var(--global-theme-color); color: var(--global-badge-text-color);">
           {{ item.date | date: "%b  %Y" }}
         </span>
       </div>
-      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
+      <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text" 
+           style="color: var(--global-text-color);">
         <p>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</p>
       </div>
     </div>
