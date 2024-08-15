@@ -1,81 +1,29 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: SEM Image Segmentation with Deep Learning Techniques
+description: general pipeline for grain-based segmentation
+img: assets/img/ML_SEM/binary.png
 importance: 2
-category: work
-giscus_comments: true
+category: Current Projects
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
+This is the binary mask of the segmented result, which literally means now we know all the coordinates of the grains being segmented out. 
+<div style="text-align: center;">
+    <img src="/assets/img/ML_SEM/binary.png" style="width: 30%; margin: 0 auto; display: block;" />
+</div>
+<div class="caption">
+    Binary Mask of the Segmentation Result
+</div>
+More interesting stuff can be done based once we know where each grain is, because we are able to segment each one of them out, like analyzing grain types (indicated by EDS results), grain morphology, percentages, and more. Due to data ownership restrictions, the original EDS map color-coded by the elements of concern could not be shared at this moment, so as to more details. Will update!
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/ML_SEM/idx66_ele_combo.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Each grain has a unique ID. By inputting this ID, you can retrieve a combined output of the same grain mapped with different elements.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The pipeline was initially built to segment loose sand thin sections cut from IODP 354 cores microphotograhed under PPL and corresponding XPL views. The original goal was to: 1) segment grains, and 2) build an open-source benchmark dataset for siliciclastic grains (feldspar, quartz, and rock fragments). However, due to the complexities of the various rock fragment types and the overlapping relationships between grains, that project is currently suspended.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Nonetheless, the pipeline works quite well for SEM images, which are less complex after undergoing mineral separation processes. Actually it didn't take me too much time to migrate my data type from thin section images to SEM images because of the well-established pipepline, which will be useful for any grain-based segmentation tasks. While the project isn’t complete, some key challenges have been overcome, including: 1) fine-tuning published segmentation models to fit custom tasks; 2) addressing minor microscopic focus shifts between corresponding images, such as XPL and PPL under the same view; and 3) developing a GUI-based labeling and cleaning process. I’m open to collaboration (zgao@ku.edu) and would love to help with tasks that share a similar skill set. If you have ideas for applying this pipeline to your data but aren’t sure where to start, feel free to reach out—I’d be happy to chat!

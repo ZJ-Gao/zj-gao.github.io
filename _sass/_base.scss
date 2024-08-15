@@ -1327,3 +1327,19 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// insert image only half of the page width
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%; /* Ensures the container takes up the full width of the page */
+}
+
+.centered-image {
+  width: 50%; /* Image occupies 50% of the container's width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures the image behaves as a block-level element */
+  margin: 0 auto; /* Centers the image within its container */
+}
