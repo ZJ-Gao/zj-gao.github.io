@@ -40,7 +40,7 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 <div class="col text-justify p-0">
     <p>
-      Before I joined KU, I graduated with a B.E. in Resource Exploration Engineering from the <a href="https://www.cup.edu.cn/pub/xyyww/collegeofgeosciences/introduction/index.htm" target="_blank">College of Geoscience, China University of Petroleum-Beijing</a> . During my time there, I discovered my passion for sedimentology as a career path. Participating in numerous mathematical modeling competitions helped me become a great team player and sparked my preference for solving geological questions with data-driven quantitative methods instead of relying on published models. Additionally, my involvement in various volunteering and community outreach activities ignited my interest in designing and teaching geology courses for students with different levels of prior knowledge.
+      Before I joined KU, I graduated with a B.E. in Resource Exploration Engineering from the <a href="https://www.cup.edu.cn/pub/xyyww/collegeofgeosciences/introduction/index.htm" target="_blank">College of Geoscience, China University of Petroleum-Beijing</a>. During my time there, I discovered my passion for sedimentology as a career path. Participating in numerous mathematical modeling competitions helped me become a great team player and sparked my preference for solving geological questions with data-driven quantitative methods instead of relying on published models. Additionally, my involvement in various volunteering and community outreach activities ignited my interest in designing and teaching geology courses for students with different levels of prior knowledge.
     </p>
 </div>
 
