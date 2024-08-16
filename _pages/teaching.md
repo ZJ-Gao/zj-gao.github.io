@@ -18,7 +18,10 @@ nav_order: 6
 | GEOL 542 Energy and Society Lab             |        |        | 2019 Fall                |
 | GEOL 302 Oceanography Lab                   |        |        | 2019 Fall                |
 
+<p>
 
+</p>
+---
 <h3 class="mt-4" style="background-color: var(--global-bg-color);">University of Kansas</h3>
 
 <div class="card mt-3" style="background-color: var(--global-bg-color);">
