@@ -41,6 +41,7 @@ table {
   td,
   th {
     font-size: 1.1rem;
+    font-weight: 400;
   }
 
   th {
@@ -483,6 +484,7 @@ footer.sticky-bottom {
     .list-group-item {
       background-color: inherit;
       border-color: var(--global-divider-color);
+      font-weight: 400;
 
       .badge {
         color: var(--global-card-bg-color) !important;

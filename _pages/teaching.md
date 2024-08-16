@@ -34,16 +34,17 @@ nav_order: 6
       </div>
     </div>
     <h6 class="font-italic mt-2 mt-sm-0" style="color: var(--global-text-color);">2023 Fall Graduate Teaching Assistant</h6>
-    <ul class="card-text font-weight-light list-group list-group-flush" style="background-color: var(--global-bg-color); color: var(--global-text-color);">
-      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+    <ul class="card-text font-weight-light" style="list-style-type: circle; padding-left: 20px;">
+      <li style="background-color: var(--global-bg-color); color: var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); padding: 10px 0;">
         Assisted senior undergraduate and graduate-level class of geomorphology, taught by <a href="https://geo.ku.edu/people/michael-blum" target="_blank" style="color: var(--global-text-color);">Prof. Mike Blum</a>.
       </li>
-      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+      <li style="background-color: var(--global-bg-color); color: var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); padding: 10px 0;">
         Mentored and evaluated groups of students working on labs, posters, and presentations.
       </li>
-      <li class="list-group-item" style="background-color: var(--global-bg-color); color: var(--global-text-color); border-color: var(--global-divider-color);">
+      <li style="background-color: var(--global-bg-color); color: var(--global-text-color); padding: 10px 0;">
         Helped organize and manage class field trip in Nebraska and Colorado.
       </li>
     </ul>
   </div>
 </div>
+
