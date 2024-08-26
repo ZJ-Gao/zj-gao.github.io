@@ -13,7 +13,8 @@ last_name: Gao
 email: zgao@ku.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zijie Gao's Personal Website Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
+footer_text: > 
+  Hosted by Github Pages.
 keywords: Zijie Gao, ZJ Gao, Zijie Gao Geology, ZJ Gao Geology, Zijie Gao website, ZJ Gao website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
