@@ -10,7 +10,7 @@
     - name: Languages
       value: English, Chinese
     - name: Hobbies
-      value: Badminton, tennis, hiking, cooking, visiting historical museums, reading and writing near a window with scenic views, and working on projects together with friends!
+      value: Badminton, tennis, pickle ball, hiking, cooking, visiting historical museums, reading and writing near a window with scenic views, and working on projects together with friends!
 - title: Education
   type: time_table
   contents:
@@ -50,13 +50,18 @@
 - title: Selected Grants, Honors and Awards
   type: time_table
   contents:
+    - year: 2025
+      items:
+          - KU Geology Summer Scholarship ($4,500)
+          - American Association of Petroleum Geologists (AAPG) Roger W. Stoneburner Memorial Grant ($3,000)
+          - KU Research Excellence Initiative Graduate Student Writing Incentive Grant ($1,000)
     - year: 2024
       items:
         - International Association of Sedimentologists (IAS) Post-graduate Research Grant (€1,000 ~ $1,090)
         - Geological Society of America (GSA) Graduate Student Research Grant ($2,500)
         - KU Geology Summer Research Grant ($4,500)
         - The Geological Society, London - Research Grant (£1,666 ~ $2,057)
-        - American Association of Petroleum Geologists (AAPG) R. Dana Russell Memorial Grant ($3,000)
+        - AAPG R. Dana Russell Memorial Grant ($3,000)
         - International Ocean Discovery Program (IODP) Schlanger Fellowship ($30,000)
     - year: 2023
       items:
@@ -66,7 +71,7 @@
         - University of Kansas Graduate Fellowship
     - year: 2020
       items:
-        - Geological Society of America (GSA) Graduate Student Research Grant ($1,250)
+        - GSA Graduate Student Research Grant ($1,250)
     - year: 2018
       items:
         - Nomination for Li Siguang Excellent Undergraduate Award
