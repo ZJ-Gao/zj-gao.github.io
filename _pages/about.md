@@ -20,30 +20,26 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 <!-- Introduction -->
 
 <div style="float: right; margin-left: 22px; margin-bottom: 10px; max-width: 100%; text-align: center;">
-  <img class="profile-img img-responsive" src="{{ 'avatar.jpg' | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}" alt="Profile Image" style="width: 300px; height: auto; max-width: 100%; border-radius: 10px;">
+  <img class="profile-img img-responsive" src="/assets/img/avatar.jpg" alt="Profile Image" style="width: 300px; height: auto; max-width: 100%; border-radius: 8px;">
 </div>
 
 
+  <p>
+  I am a PhD candidate at the University of Kansas (graduating May 2026) working at the intersection of data science and geoscience. I specialize in building machine learning pipelines for complex, messy natural datasets, from deep-sea sediment cores to SEM imagery.
 
-
-<p>
-  I am a PhD candidate at the <a href="https://geo.ku.edu/" target="_blank">Geology Department</a> of the <a href="https://www.ku.edu/" target="_blank">University of Kansas (KU) </a> in Lawrence, KS, advised by <a href="https://geo.ku.edu/people/michael-blum" target="_blank">Dr. Mike Blum</a>, and co-advised by <a href="https://scholar.google.com/citations?user=re03tZQAAAAJ&hl=en&oi=ao" target="_blank">Dr. Jenn Pickering (Auchter)</a> from the <a href="https://caeser.memphis.edu/" target="_blank">CAESER University of Memphis</a>. My Ph.D. dissertation focuses on the sediment gravity flow (SGF) deposits recovered by IODP 354 Bengal Fan to investigate: 1) characteristics of the SGFs, especially their thickness distributions, 2) mechanisms that ignited and drove the transport of these relatively coarse sediments to the deep-sea coring sites, and 3) the timing of deposition for SGFs using Infrared-Stimulated Luminescence (IRSL) to provide numerical age estimates that can constrain the timing of individual SGF deposition. 
   </p>
 
   <p>
-  I am also working on a side project that leverages machine learning techniques to segment geological images, supporting quantitative percentage calculations. I’ve experimented with both siliciclastic thin sections and SEM images, with the most promising results and potential for publication coming from the SEM images. I welcome and appreciate any form of discussion or collaboration on applying machine learning in geology!
+  My technical toolkit includes Python (scikit-learn, PyTorch, Pandas), statistical modeling, and computer vision. I've applied unsupervised learning algorithms (GMM, K-means, DBSCAN) to classify sediment deposits from sparse core measurements, and built an end-to-end deep learning pipeline using Meta's Segment Anything Model for automated mineral grain segmentation, which I open-sourced on GitHub. During industry internships at Occidental and Civitas Resources, I developed Python ETL (Extract, Transform, Load) pipelines to integrate heterogeneous geoscience datasets and created Spotfire analytics tools that informed well placement, well spacing and completion design decisions.
 </p>
 
 <p>
-  Previously, I was a master student at the Geology Department of KU, where I attempted to synthesize dolomite and very-high-magnesium calcite under pressurized conditions with <a href="https://geo.ku.edu/people/jennifer-roberts" target="_blank">Dr. Jennifer Roberts</a>.
+  What sets me apart is my ability to combine quantitative rigor with domain expertise. I understand the geology behind the data, which helps me build models that are not just statistically sound but scientifically meaningful. I'm drawn to roles where I can apply transferable data science skills to high-impact problems in exploration, climate, or environmental science.
 </p>
 
-<div class="col text-justify p-0">
-    <p>
-      Before I joined KU, I graduated with a B.E. in Resource Exploration Engineering from the <a href="https://www.cup.edu.cn/pub/xyyww/collegeofgeosciences/introduction/index.htm" target="_blank">College of Geoscience, China University of Petroleum-Beijing</a>. During my time there, I discovered my passion for sedimentology as a career path. Participating in numerous mathematical modeling competitions helped me become a great team player and sparked my preference for solving geological questions with data-driven quantitative methods instead of relying on published models. Additionally, my involvement in various volunteering and community outreach activities ignited my interest in designing and teaching geology courses for students with different levels of prior knowledge.
-    </p>
-</div>
-
+<p>
+  I welcome collaboration and discussion. Feel free to reach out.
+</p>
 <!-- News -->
 <div class="news mt-3 p-0">
   <h1 class="title mb-4 p-0" style="color: var(--global-text-color);">news</h1>

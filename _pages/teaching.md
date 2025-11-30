@@ -12,7 +12,7 @@ nav_order: 6
 |---------------------------------------------|--------|--------|--------------------------:|
 | GEOL 542 Energy and Society Lab             |        |        | 2019 Fall                |
 | GEOL 541 Geomorphology Lab                  |        |        | 2023 Fall                |
-| GEOL 311 Mineralogy Lab                     |        |        | 2022 Fall & 2023 Fall    |
+| GEOL 311 Mineralogy Lab                     |        |        | 2022 Fall & 2023 Fall & 2025 Fall  |
 | GEOL 302 Oceanography Lab                   |        |        | 2019 Fall                |
 | GEOL 171/172 Earthquakes and Nature Hazards |        |        | 2025 Spring              |
 | GEOL 103 Geology Fundamentals Lab           |        |        | 2020 Spring & 2020 Fall              |
@@ -67,7 +67,7 @@ nav_order: 6
         </span>
       </div>
     </div>
-    <h6 class="font-italic mt-2 mt-sm-0" style="color: var(--global-text-color);">2022 & 23 Fall Graduate Teaching Assistant</h6>
+    <h6 class="font-italic mt-2 mt-sm-0" style="color: var(--global-text-color);">2022 & 23 & 25 Fall Graduate Teaching Assistant</h6>
     <ul class="card-text font-weight-light" style="list-style-type: circle; padding-left: 20px;">
       <li style="background-color: var(--global-bg-color); color: var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); padding: 10px 0;">
         Managed the Mineralogy hand sample labs, which complement the Mineralogy lecture course.
