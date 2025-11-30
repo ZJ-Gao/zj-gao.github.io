@@ -23,10 +23,10 @@ I visited the IODP Core facility <a href="https://www.kochi-core.jp/en/" target=
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Describing cores_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/Describing_cores_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Describing cores_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/Describing_cores_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -60,4 +60,3 @@ Kochi is a beautiful city with all the elements sedimentologists like: river, co
 4. **Talling, P. J., S. Hage, M. L. Baker, T. S. Bianchi, R. G. Hilton, and K. L. Maier**, 2024, The Global Turbidity Current Pump and Its Implications for Organic Carbon Cycling: *Annual Review of Marine Science*, **v. 16**, no. 1, p. null, doi:10.1146/annurev-marine-032223-103626.
 
 5. **Joussain, R., C. Colin, Z. Liu, L. Meynadier, L. Fournier, K. Fauquembergue, S. Zaragosi, F. Schmidt, V. Rojas, and F. Bassinot**, 2016, Climatic control of sediment transport from the Himalayas to the proximal NE Bengal Fan during the last glacial-interglacial cycle: *Quaternary Science Reviews*, **v. 148**, p. 1–16, doi:10.1016/j.quascirev.2016.06.016.
-
