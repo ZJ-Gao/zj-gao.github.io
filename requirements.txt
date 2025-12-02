@@ -1,5 +1,3 @@
 nbconvert
 scholarly
-pyyaml
-scholarly
 PyYAML
