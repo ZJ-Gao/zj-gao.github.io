@@ -49,12 +49,12 @@
     </div>
   {% endif %}
 
-<!-- Entry bib key -->
-<div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
-  <!-- Title -->
-  <div class="title">{{ entry.title }}</div>
-  <!-- Author -->
-      <div class="author">
+  <!-- Entry bib key -->
+  <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-10{% endif %}">
+    <!-- Title -->
+    <div class="title">{{ entry.title }}</div>
+    <!-- Author -->
+    <div class="author">
       {% assign author_array_size = entry.author_array | size %}
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
@@ -71,18 +71,18 @@
           {% endif %}
         {%- endif -%}
 
+        {%- comment -%}
+          Coauthor URL lookup: searches for matching coauthors by last name,
+          then matches first name against multiple variants (e.g., ["Jennifer", "J."]).
+          The 'strip' filter removes any leading/trailing whitespace to handle
+          formatting inconsistencies in BibTeX entries.
+        {%- endcomment -%}
         {% assign coauthor_url = null %}
-        {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
+        {%- assign clean_last_name = author_last_name | downcase | remove_accents | strip -%}
         {% if site.data.coauthors[clean_last_name] %}
           {%- for coauthor in site.data.coauthors[clean_last_name] -%}
             {%- assign clean_first_name = author.first | downcase | remove_accents | strip -%}
             {%- assign match_found = false -%}
-            {%- comment -%}
-            Loop through all first name variants (e.g., ["Jennifer", "J."]) to check
-            if any variant matches the author's first name. This handles cases where
-            authors may use different name formats in different publications.
-            The 'strip' filter removes any leading/trailing whitespace.
-            {%- endcomment -%}
             {%- for firstname_variant in coauthor.firstname -%}
               {%- assign clean_variant = firstname_variant | downcase | remove_accents | strip -%}
               {% if clean_variant == clean_first_name %}
@@ -96,7 +96,6 @@
             {% endif %}
           {% endfor %}
         {%- endif -%}
-
 
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false %},&nbsp;{% endif %}
@@ -163,9 +162,7 @@
       {% endif %}
     </div>
 
-
-
-<!-- Journal/Book title and date -->
+    <!-- Journal/Book title and date -->
     {%- assign proceedings = 'inproceedings,incollection' | split: ',' -%}
     {%- assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' -%}
     {% if entry.type == 'article' %}
@@ -201,7 +198,6 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
-
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -242,7 +238,7 @@
         <a class="badge grey waves-effect font-weight-light mr-1" href="{{ entry.video }}" target="_blank">Video</a>
       {% endif %}
     </div>
- {% if site.enable_publication_badges %}
+    {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
       {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
       {% assign entry_has_google_scholar_badge = entry.google_scholar_id %}
@@ -292,7 +288,7 @@
                 {% assign gs_cite_count = site.data.citations[citation_key] %}
               {% endif %}
             {% endif %}
-
+            <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ citation_key }}"
               aria-label="Google Scholar link"
               role="button"
