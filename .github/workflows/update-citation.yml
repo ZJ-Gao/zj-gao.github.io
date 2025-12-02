@@ -14,8 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
-             with:
-               token: ${{ secrets.update_google_citation}}
+        with:
+          token: ${{ secrets.UPDATE_GOOGLE_CITATION }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
