@@ -1,5 +1,4 @@
-name: Update Google Scholar Citations
-
+name: Update Scholar Citations
 on:
   schedule:
     - cron: "0 0 * * 1" # Monday
@@ -16,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
       # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
              with:
-               token: ${{secrets.update_google_citation}}
+               token: ${{ secrets.update_google_citation}}
 
       - name: Set up Python
         uses: actions/setup-python@v4
