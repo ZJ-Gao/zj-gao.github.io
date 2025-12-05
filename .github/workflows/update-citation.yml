@@ -1,21 +1,22 @@
 name: Update Scholar Citations
+
 on:
   schedule:
-    - cron: "0 0 * * 1" # Monday
-    - cron: "0 0 * * 3" # Wednesday
-    - cron: "0 0 * * 5" # Friday
-  workflow_dispatch:
+    - cron: "0 0 * * 0"  # Only Sunday at midnight UTC (Option 4: reduced frequency)
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
 
 jobs:
-  update-citations:
+  update_citations:
+    if: github.repository_owner == github.event.repository.owner.login
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
         with:
-          token: ${{ secrets.UPDATE_GOOGLE_CITATION }}
+          token: ${{ secrets.update_google_citation }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -81,7 +82,7 @@ jobs:
             echo "✅ _data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
           else
             echo "ℹ️ _data/citations.yml was not changed."
-            echo "ℹ️ _data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ _data/citations.yml was not changed (preserved existing data)." >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Configure Git

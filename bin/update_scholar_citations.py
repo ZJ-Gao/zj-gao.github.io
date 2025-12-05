@@ -42,7 +42,7 @@ def update_citations(scholar_id):
         
         for i, pub in enumerate(author.get('publications', []), 1):
             try:
-                time.sleep(2)  # Be nice to Google Scholar
+                time.sleep(5)  # Be nice to Google Scholar
                 print(f"Processing publication {i}/{pub_count}...")
                 
                 filled_pub = scholarly.fill(pub)
@@ -88,9 +88,29 @@ def main():
     # Fetch citations
     citations = update_citations(scholar_id)
     
+    # Check if we got any data
     if not citations:
-        print("\nWarning: No citations found. Creating empty file.")
-        citations = {}
+        print("\n⚠️  Warning: No citations retrieved.")
+        print("⚠️  This could indicate Google Scholar is blocking requests.")
+        print("⚠️  Not updating citations.yml to preserve existing data.")
+        sys.exit(0)  # Exit successfully without updating
+    
+    # Check if all values are 0 - likely a scraping failure
+    non_zero_count = sum(1 for count in citations.values() if count > 0)
+    total_count = len(citations)
+    
+    if total_count > 0 and non_zero_count == 0:
+        print(f"\n⚠️  Warning: All {total_count} citation counts are 0.")
+        print("⚠️  This likely indicates Google Scholar blocked the scraping request.")
+        print("⚠️  Not updating citations.yml to preserve existing data.")
+        sys.exit(0)  # Exit successfully without updating
+    
+    # If more than 80% are zeros, something might be wrong
+    if total_count > 0 and (non_zero_count / total_count) < 0.2:
+        print(f"\n⚠️  Warning: Only {non_zero_count}/{total_count} citations have non-zero counts.")
+        print("⚠️  This may indicate partial scraping failure.")
+        print("⚠️  Not updating citations.yml to preserve existing data.")
+        sys.exit(0)  # Exit successfully without updating
     
     # Ensure _data directory exists
     data_dir = Path('_data')
@@ -100,13 +120,10 @@ def main():
     output_file = data_dir / 'citations.yml'
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
-            if citations:
-                yaml.dump(citations, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
-            else:
-                f.write("# No citations found or error occurred\n")
-                f.write("# This file will be populated when citations are successfully fetched\n")
+            yaml.dump(citations, f, default_flow_style=False, sort_keys=True, allow_unicode=True)
         
         print(f"\n✓ Successfully wrote {len(citations)} citation counts to {output_file}")
+        print(f"✓ {non_zero_count} publications have non-zero citations")
         
     except Exception as e:
         print(f"Error writing citations file: {e}")
