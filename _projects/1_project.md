@@ -37,13 +37,13 @@ Kochi is a beautiful city with all the elements sedimentologists like: river, co
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="{{ '/assets/img/Kochi_3.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
+        {% include figure.liquid path="assets/img/Kochi_3.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="{{ '/assets/img/Kochi_2.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
+        {% include figure.liquid path="assets/img/Kochi_2.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img src="{{ '/assets/img/Kochi_1.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
+        {% include figure.liquid path="assets/img/Kochi_1.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
