@@ -23,31 +23,32 @@ I visited the IODP Core facility <a href="https://www.kochi-core.jp/en/" target=
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Describing_cores_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/Describing_cores_1.jpg' | relative_url }}" alt="Describing cores" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/Describing_cores_2.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/Describing_cores_2.png' | relative_url }}" alt="Describing cores" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 <div class="caption">
     Describing Cores at KCC with Dr. Jenn Pickering Auchter
 </div>
+
 Kochi is a beautiful city with all the elements sedimentologists like: river, coastline, mountain etc.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Kochi_3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/Kochi_3.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Kochi_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/Kochi_2.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/Kochi_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/Kochi_1.jpg' | relative_url }}" alt="Kochi view" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 <div class="caption">
     Scenic views in Kochi City
 </div>
-
 
 # References
 
