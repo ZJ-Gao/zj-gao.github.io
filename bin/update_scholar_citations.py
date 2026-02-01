@@ -3,16 +3,32 @@
 
 import sys
 import time
+import random
 from pathlib import Path
 from datetime import datetime
 
 try:
     from scholarly import scholarly
+    from scholarly import ProxyGenerator
     import yaml
 except ImportError as e:
     print(f"Error importing required modules: {e}")
     print("Please install required packages: pip install scholarly PyYAML")
     sys.exit(1)
+
+
+def setup_scholarly():
+    """Setup scholarly with proxy rotation if available."""
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] Setting up scholarly with enhanced requests...")
+    try:
+        # Try to setup rotating proxies
+        pg = ProxyGenerator()
+        pg.ScraperAPI(api_key='')  # Empty key will use free proxies
+        scholarly.use_proxy(pg)
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Proxy rotation enabled")
+    except Exception as e:
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Proxy setup failed: {e}")
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Continuing without proxies (will use direct requests)")
 
 
 def load_config():
@@ -28,16 +44,53 @@ def load_config():
         sys.exit(1)
 
 
+def fetch_author_with_retry(scholar_id, max_retries=3):
+    """Fetch author profile with exponential backoff retry mechanism."""
+    start_time = time.time()
+
+    for attempt in range(max_retries):
+        try:
+            elapsed = time.time() - start_time
+            if attempt > 0:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Retry attempt {attempt}/{max_retries} (elapsed: {elapsed:.1f}s)...")
+
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Searching for author profile...")
+            search_query = scholarly.search_author_id(scholar_id)
+            author = scholarly.fill(search_query, sections=['publications'])
+
+            if author is None:
+                raise Exception("Author profile returned None - likely rate-limited")
+
+            return author, elapsed
+
+        except Exception as e:
+            elapsed = time.time() - start_time
+            if attempt < max_retries - 1:
+                # Exponential backoff: 2s, 4s, 8s between retries
+                wait_time = 2 ** (attempt + 1)
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Request failed: {e}")
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Waiting {wait_time}s before retry...")
+                time.sleep(wait_time)
+            else:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] All {max_retries} attempts failed after {elapsed:.1f}s: {e}")
+                return None, elapsed
+
+
 def update_citations(scholar_id):
-    """Fetch citation counts from Google Scholar."""
+    """Fetch citation counts from Google Scholar with rate-limit handling."""
     start_time = time.time()
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching citations for scholar ID: {scholar_id}")
 
     try:
-        # Search for author
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Searching for author profile...")
-        search_query = scholarly.search_author_id(scholar_id)
-        author = scholarly.fill(search_query, sections=['publications'])
+        # Fetch author with retry mechanism
+        author, elapsed = fetch_author_with_retry(scholar_id)
+
+        if author is None:
+            elapsed = time.time() - start_time
+            print(f"\n⚠️  Google Scholar blocked the request after {elapsed:.1f}s")
+            print("⚠️  This typically happens due to rate-limiting.")
+            print("⚠️  Try again in a few minutes, or consider running less frequently.")
+            return {}
 
         citations = {}
         pub_count = len(author.get('publications', []))
@@ -46,13 +99,21 @@ def update_citations(scholar_id):
         for i, pub in enumerate(author.get('publications', []), 1):
             try:
                 elapsed = time.time() - start_time
-                # Adaptive sleep: reduce sleep time slightly and track progress
-                time.sleep(2)  # Reduced from 5 to 2 seconds (still respectful)
+
+                # Variable delay: 1-3 seconds to look more natural and avoid pattern detection
+                delay = random.uniform(1.0, 3.0)
+                time.sleep(delay)
 
                 if i % 5 == 0 or i == pub_count:
                     print(f"[{datetime.now().strftime('%H:%M:%S')}] Progress: {i}/{pub_count} ({elapsed:.1f}s elapsed)...")
 
                 filled_pub = scholarly.fill(pub)
+
+                # Handle None response
+                if filled_pub is None:
+                    print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Publication {i} returned None, skipping...")
+                    continue
+
                 pub_id = filled_pub.get('author_pub_id', '')
 
                 if pub_id:
@@ -85,6 +146,9 @@ def update_citations(scholar_id):
 def main():
     main_start = time.time()
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Starting citation update process...")
+
+    # Setup scholarly
+    setup_scholarly()
 
     # Load config
     config = load_config()

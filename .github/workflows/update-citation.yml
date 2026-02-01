@@ -47,9 +47,9 @@ jobs:
         shell: bash
         run: |
           set +e
-          echo "🚀 Running citation update script (with timeout protection)..."
+          echo "🚀 Running citation update script (with retry & rate-limit handling)..."
           start_time=$(date)
-          timeout 300 python bin/update_scholar_citations.py > /tmp/citation_update.log 2>&1
+          timeout 600 python bin/update_scholar_citations.py > /tmp/citation_update.log 2>&1
           status=$?
           end_time=$(date)
           cat /tmp/citation_update.log
@@ -57,7 +57,7 @@ jobs:
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
             echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
           elif [ $status -eq 124 ]; then
-            echo "❌ Citation update script timed out after 300 seconds (started at $start_time, ended at $end_time)."
+            echo "❌ Citation update script timed out after 600 seconds (started at $start_time, ended at $end_time)."
             echo "❌ Citation update timed out - no changes made to preserve data." >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
