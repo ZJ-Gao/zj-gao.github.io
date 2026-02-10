@@ -16,6 +16,7 @@ nav_order: 6
 | GEOL 302 Oceanography Lab                   |        |        | 2019 Fall                |
 | GEOL 171/172 Earthquakes and Nature Hazards |        |        | 2025 Spring              |
 | GEOL 103 Geology Fundamentals Lab           |        |        | 2020 Spring & 2020 Fall              |
+| GEOL 105 The History of Earth            |        |        | 2026 Spring (Instructor)  |
 | GEOL 101 The Way the Earth Works            |        |        | 2020 & 21 & 25 Spring & 2022 Fall  |
 
 
