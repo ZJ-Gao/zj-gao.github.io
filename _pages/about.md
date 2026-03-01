@@ -25,7 +25,7 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 
   <p>
-  I am a PhD candidate at the University of Kansas (graduating May 2026) working at the intersection of data science and geoscience. I specialize in building machine learning pipelines for complex, messy natural datasets, from deep-sea sediment cores to SEM imagery.
+  I am a PhD candidate at the University of Kansas (graduating July 2026) working at the intersection of data science and geoscience. I specialize in building machine learning pipelines for complex, messy natural datasets, from deep-sea sediment cores to SEM imagery.
 
   </p>
 
