@@ -25,21 +25,21 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 
   <p>
-  I am a PhD candidate at the University of Kansas (graduating July 2026) working at the intersection of data science and geoscience. I specialize in building machine learning pipelines for complex, messy natural datasets, from deep-sea sediment cores to SEM imagery.
-
+  I recently completed my PhD in geology at the University of Kansas, advised by Dr. Mike Blum. My dissertation traces sand from the Himalayas to the Bengal Fan thousands of kilometers away in the Indian Ocean, reconstructing the dynamic of Earth's largest sediment dispersal system over the past several hundred thousand years.
   </p>
 
   <p>
-  My technical toolkit includes Python (scikit-learn, PyTorch, Pandas), statistical modeling, and computer vision. I've applied unsupervised learning algorithms (GMM, K-means, DBSCAN) to classify sediment deposits from sparse core measurements, and built an end-to-end deep learning pipeline using Meta's Segment Anything Model for automated mineral grain segmentation, which I open-sourced on GitHub. During industry internships at Occidental and Civitas Resources, I developed Python ETL (Extract, Transform, Load) pipelines to integrate heterogeneous geoscience datasets and created Spotfire analytics tools that informed well placement, well spacing and completion design decisions.
-</p>
+  Through my PhD I developed a broad geoscience skill set. I describe and interpret deep-sea sediment cores from IODP Expedition 354 on the Bengal Fan, then date them using multiple geochronology methods: radiocarbon for the most recent deposits, infrared stimulated luminescence (IRSL) for sandy beds beyond the radiocarbon limit, and detrital zircon U-Pb analysis to fingerprint the provenance of these sands in the deep sea. Beyond cores, I use well-log data for basin-scale property mapping and petrophysical calculations, and interpret 3D seismic volumes to characterize subsurface geology.
+  </p>
 
-<p>
-  What sets me apart is my ability to combine quantitative rigor with domain expertise. I understand the geology behind the data, which helps me build models that are not just statistically sound but scientifically meaningful. I'm drawn to roles where I can apply transferable data science skills to high-impact problems in exploration, climate, or environmental science.
-</p>
+  <p>
+  I am equally drawn to the quantitative side of this work. During core description, for example, I recognized two distinct flavors of turbidites but needed to upgrade from qualitative observation to quantitative classification. Unsupervised machine learning let me do that across nearly 1,000 turbidites in the Bengal Fan. The same mindset drives my computer vision work (an open-sourced deep learning pipeline for mineral grain segmentation) and the data tools I built during industry internships at Oxy and Civitas Resources to guide well placement and completion design.
+  </p>
 
-<p>
-  I welcome collaboration and discussion. Feel free to reach out.
-</p>
+  <p>
+  I am genuinely passionate about building automated workflows and mining insights from geological data. I am looking for roles where I can bring this combination of geoscience and data science to high-impact problems in exploration, energy, climate, or environmental science.
+  </p>
+
 <!-- News -->
 <div class="news mt-3 p-0">
   <h1 class="title mb-4 p-0" style="color: var(--global-text-color);">news</h1>
