@@ -44,7 +44,17 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 <div class="news mt-3 p-0">
   <h1 class="title mb-4 p-0" style="color: var(--global-text-color);">news</h1>
   {% assign news = site.news | reverse %}
-  {% for item in news limit: site.news_limit %}
+  {% assign sticky_news = news | where: 'sticky', true %}
+  {% assign normal_news = news | where_exp: 'item', 'item.sticky != true' %}
+  {% assign remaining = site.news_limit | minus: sticky_news.size %}
+  {% if remaining > 0 %}
+    {% assign filler = normal_news | slice: 0, remaining %}
+    {% assign display_news = sticky_news | concat: filler %}
+  {% else %}
+    {% assign display_news = sticky_news %}
+  {% endif %}
+  {% assign display_news = display_news | sort: 'date' | reverse %}
+  {% for item in display_news %}
     <div class="row p-0">
       <div class="col-sm-2 p-0">
         <span class="badge font-weight-bold text-uppercase align-middle date ml-3" 
