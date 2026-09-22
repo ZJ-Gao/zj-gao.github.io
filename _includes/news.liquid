@@ -14,7 +14,16 @@
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}
-        {% for item in news limit: news_limit %}
+        {% comment %} Sticky items are always shown; the rest fill up to the limit. {% endcomment %}
+        {% assign sticky_news = news | where: 'sticky', true %}
+        {% assign normal_news = news | where_exp: 'item', 'item.sticky != true' %}
+        {% assign display_news = sticky_news %}
+        {% assign remaining = news_limit | minus: sticky_news.size %}
+        {% if remaining > 0 %}
+          {% assign filler = normal_news | slice: 0, remaining %}
+          {% assign display_news = sticky_news | concat: filler %}
+        {% endif %}
+        {% for item in display_news %}
           <tr>
             <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
             <td>
