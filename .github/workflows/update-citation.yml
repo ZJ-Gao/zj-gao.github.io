@@ -49,7 +49,7 @@ jobs:
           set +e
           echo "🚀 Running citation update script (with retry & rate-limit handling)..."
           start_time=$(date)
-          timeout 600 python bin/update_scholar_citations.py > /tmp/citation_update.log 2>&1
+          timeout 600 python -u bin/update_scholar_citations.py > /tmp/citation_update.log 2>&1
           status=$?
           end_time=$(date)
           cat /tmp/citation_update.log
