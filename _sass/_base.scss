@@ -769,6 +769,14 @@ footer.sticky-bottom {
       }
 
       .links {
+        a.scholar-badge {
+          display: inline-block;
+          margin-left: 0.25rem;
+          img {
+            height: 20px;
+            vertical-align: middle;
+          }
+        }
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -853,8 +861,8 @@ footer.sticky-bottom {
 }
 
 .highlight-author {
-  color: green;
-  font-weight: 500; /* Ensure no underline for the specified author */
+  color: var(--global-theme-color);
+  font-weight: 700;
 }
 
 // Rouge Color Customization

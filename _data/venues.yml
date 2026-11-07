@@ -1,9 +1,5 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Optional per-venue badge colors and links for the Publications page.
+# Example:
+# "Geological Journal":
+#   url: https://onlinelibrary.wiley.com/journal/10991034
+#   color: "#00369f"
