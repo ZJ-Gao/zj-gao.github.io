@@ -13,3 +13,4 @@ vendor
 .idea
 # local citation updater environment
 .venv-citations/
+__pycache__/
