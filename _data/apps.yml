@@ -1,0 +1,38 @@
+- name: Stillsand
+  tagline: Meditation and focus, one grain at a time
+  icon: /assets/img/apps/stillsand-icon.png
+  platforms: [iPhone, Mac]
+  description: >
+    A calm space to meditate, focus and look back on your days. Your work
+    session is a physics hourglass whose golden grains fall, collide and pile
+    up until time runs out. Between rounds, a short scene to imagine and a
+    gentle stretch help you rest, and a history view brings back where you
+    were, the weather, and when you focused.
+  tags: [Free, SwiftUI, Pomodoro, Journal]
+  links:
+    - label: App Store
+      icon: fa-brands fa-apple
+      url: https://apps.apple.com/us/app/stillsand-meditation-focus/id6827839914
+  screenshots:
+    - /assets/img/apps/stillsand-shot-1.jpg
+    - /assets/img/apps/stillsand-shot-2.jpg
+    - /assets/img/apps/stillsand-shot-3.jpg
+    - /assets/img/apps/stillsand-shot-4.jpg
+
+- name: WaveScribe
+  tagline: Offline dictation for English and Mandarin
+  icon: /assets/img/apps/wavescribe-icon.png
+  platforms: [Mac]
+  description: >
+    A menu bar dictation tool for Apple silicon Macs. Press a shortcut, speak,
+    and the text appears at your cursor. Recognition runs locally with Qwen3
+    ASR (or Whisper for English), transcribes while you talk, and loads the
+    model only when needed to keep memory use small.
+  tags: [Free, Open source, Offline, MLX]
+  links:
+    - label: GitHub
+      icon: fa-brands fa-github
+      url: https://github.com/ZJ-Gao/WaveScribe
+    - label: Download
+      icon: fa-solid fa-download
+      url: https://github.com/ZJ-Gao/WaveScribe/releases/latest

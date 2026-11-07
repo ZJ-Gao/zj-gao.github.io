@@ -40,6 +40,23 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
   I am genuinely passionate about building automated workflows and mining insights from geological data. I am looking for roles where I can bring this combination of geoscience and data science to high-impact problems in exploration, energy, climate, or environmental science.
   </p>
 
+<!-- Apps -->
+{% include apps_style.liquid %}
+<div style="clear: both;"></div>
+<h1 class="title mb-2 p-0" style="color: var(--global-text-color);">apps I build</h1>
+<div class="app-strip">
+  {% for app in site.data.apps %}
+  <a class="app-chip" href="{{ '/apps/' | relative_url }}#{{ app.name | slugify }}">
+    <img src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon">
+    <div>
+      <div class="app-chip-name">{{ app.name }}</div>
+      <div class="app-chip-tag">{{ app.tagline }}</div>
+    </div>
+    <i class="fa-solid fa-arrow-right app-chip-arrow"></i>
+  </a>
+  {% endfor %}
+</div>
+
 <!-- News -->
 <div class="news mt-3 p-0">
   <h1 class="title mb-4 p-0" style="color: var(--global-text-color);">news</h1>
