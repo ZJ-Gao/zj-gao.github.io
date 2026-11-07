@@ -14,3 +14,6 @@ vendor
 # local citation updater environment
 .venv-citations/
 __pycache__/
+
+# local double-click helper, not part of the site
+Update Scholar Citations.command

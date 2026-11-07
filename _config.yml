@@ -196,6 +196,7 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - "Update Scholar Citations.command"
 keep_files:
   - CNAME
   - .nojekyll
