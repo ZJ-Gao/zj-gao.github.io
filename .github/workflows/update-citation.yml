@@ -64,6 +64,7 @@ jobs:
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
           fi
           set -e
+          echo "status=$status" >> $GITHUB_OUTPUT
 
       - name: Save new citations.yml hash
         id: after
@@ -103,3 +104,9 @@ jobs:
             git commit -m "Update Google Scholar citations"
             git push
           )
+
+      - name: Fail the run if the citation script failed
+        if: steps.run_citation_update.outputs.status != '0'
+        run: |
+          echo "❌ The citation script failed (exit code ${{ steps.run_citation_update.outputs.status }}). See the log above."
+          exit 1
