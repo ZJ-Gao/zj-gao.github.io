@@ -96,38 +96,17 @@ def update_citations(scholar_id):
         pub_count = len(author.get('publications', []))
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Found {pub_count} publications")
 
+        # The profile page already lists each publication's ID and citation count,
+        # so there is no need to open every publication page (those extra requests
+        # are the ones Google Scholar tends to block).
         for i, pub in enumerate(author.get('publications', []), 1):
-            try:
-                elapsed = time.time() - start_time
-
-                # Variable delay: 1-3 seconds to look more natural and avoid pattern detection
-                delay = random.uniform(1.0, 3.0)
-                time.sleep(delay)
-
-                if i % 5 == 0 or i == pub_count:
-                    print(f"[{datetime.now().strftime('%H:%M:%S')}] Progress: {i}/{pub_count} ({elapsed:.1f}s elapsed)...")
-
-                filled_pub = scholarly.fill(pub)
-
-                # Handle None response
-                if filled_pub is None:
-                    print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Publication {i} returned None, skipping...")
-                    continue
-
-                pub_id = filled_pub.get('author_pub_id', '')
-
-                if pub_id:
-                    # Extract just the publication ID part
-                    pub_id_short = pub_id.split(':')[-1] if ':' in pub_id else pub_id
-                    # Store with full key format: scholar_id:pub_id
-                    full_key = f"{scholar_id}:{pub_id_short}"
-                    citation_count = filled_pub.get('num_citations', 0)
-                    citations[full_key] = citation_count
-
-            except Exception as e:
-                elapsed = time.time() - start_time
-                print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Failed to process publication {i} after {elapsed:.1f}s: {e}")
+            pub_id = pub.get('author_pub_id', '')
+            if not pub_id:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Publication {i} has no ID, skipping...")
                 continue
+            pub_id_short = pub_id.split(':')[-1] if ':' in pub_id else pub_id
+            full_key = f"{scholar_id}:{pub_id_short}"
+            citations[full_key] = pub.get('num_citations', 0)
 
         elapsed = time.time() - start_time
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Citation fetching completed in {elapsed:.1f}s")
