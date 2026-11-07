@@ -11,3 +11,6 @@ assets/libs/
 node_modules/
 vendor
 .idea
+# local citation updater environment
+.venv-citations/
+__pycache__/

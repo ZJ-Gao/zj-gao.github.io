@@ -17,6 +17,24 @@ except ImportError as e:
     sys.exit(1)
 
 
+TITLES = {}
+
+
+def report_changes(old, new):
+    """Print each publication's old and new citation count."""
+    print("\nCitation counts (old -> new):")
+    changed = 0
+    for key in sorted(set(old) | set(new), key=lambda k: -(new.get(k) or 0)):
+        o, n = old.get(key), new.get(key)
+        mark = "  " if o == n else "* "
+        if o != n:
+            changed += 1
+        title = (TITLES.get(key) or key)[:70]
+        print(f"{mark}{str(o):>4} -> {str(n):<4} {title}")
+    print(f"{changed} of {len(set(old) | set(new))} entries changed.\n")
+    return changed
+
+
 def setup_scholarly():
     """Setup scholarly with proxy rotation if available."""
     print(f"[{datetime.now().strftime('%H:%M:%S')}] Setting up scholarly with enhanced requests...")
@@ -96,38 +114,18 @@ def update_citations(scholar_id):
         pub_count = len(author.get('publications', []))
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Found {pub_count} publications")
 
+        # The profile page already lists each publication's ID and citation count,
+        # so there is no need to open every publication page (those extra requests
+        # are the ones Google Scholar tends to block).
         for i, pub in enumerate(author.get('publications', []), 1):
-            try:
-                elapsed = time.time() - start_time
-
-                # Variable delay: 1-3 seconds to look more natural and avoid pattern detection
-                delay = random.uniform(1.0, 3.0)
-                time.sleep(delay)
-
-                if i % 5 == 0 or i == pub_count:
-                    print(f"[{datetime.now().strftime('%H:%M:%S')}] Progress: {i}/{pub_count} ({elapsed:.1f}s elapsed)...")
-
-                filled_pub = scholarly.fill(pub)
-
-                # Handle None response
-                if filled_pub is None:
-                    print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Publication {i} returned None, skipping...")
-                    continue
-
-                pub_id = filled_pub.get('author_pub_id', '')
-
-                if pub_id:
-                    # Extract just the publication ID part
-                    pub_id_short = pub_id.split(':')[-1] if ':' in pub_id else pub_id
-                    # Store with full key format: scholar_id:pub_id
-                    full_key = f"{scholar_id}:{pub_id_short}"
-                    citation_count = filled_pub.get('num_citations', 0)
-                    citations[full_key] = citation_count
-
-            except Exception as e:
-                elapsed = time.time() - start_time
-                print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Failed to process publication {i} after {elapsed:.1f}s: {e}")
+            pub_id = pub.get('author_pub_id', '')
+            if not pub_id:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Warning: Publication {i} has no ID, skipping...")
                 continue
+            pub_id_short = pub_id.split(':')[-1] if ':' in pub_id else pub_id
+            full_key = f"{scholar_id}:{pub_id_short}"
+            citations[full_key] = pub.get('num_citations', 0)
+            TITLES[full_key] = pub.get('bib', {}).get('title', '')
 
         elapsed = time.time() - start_time
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Citation fetching completed in {elapsed:.1f}s")
@@ -190,9 +188,17 @@ def main():
     # Ensure _data directory exists
     data_dir = Path('_data')
     data_dir.mkdir(exist_ok=True)
+    output_file = data_dir / 'citations.yml'
+
+    old = {}
+    if output_file.exists():
+        with open(output_file, 'r', encoding='utf-8') as f:
+            old = yaml.safe_load(f) or {}
+    if report_changes(old, citations) == 0:
+        print("No changes; citations.yml left as it is.")
+        sys.exit(0)
 
     # Write to temporary file first, then move to final location for safety
-    output_file = data_dir / 'citations.yml'
     temp_file = data_dir / 'citations.yml.tmp'
     try:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Writing citations to temporary file...")
