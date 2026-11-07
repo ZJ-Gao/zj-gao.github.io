@@ -27,7 +27,12 @@ if [ "$branch" != "master" ]; then
   exit 0
 fi
 
-read -r -p "Commit and push the new counts so the live site updates? [y/N] " answer
+answer=""
+if [ -t 0 ]; then
+  read -r -p "Commit and push the new counts so the live site updates? [y/N] " answer || answer=""
+else
+  echo "No terminal to ask in (for example when run with ! inside Claude Code): treating it as no."
+fi
 if [[ "$answer" =~ ^[Yy]$ ]]; then
   git add _data/citations.yml
   git commit -m "Update Google Scholar citations"
