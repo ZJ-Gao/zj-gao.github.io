@@ -19,25 +19,25 @@ address: <a href="https://www.google.com/maps/place/Lawrence,+KS/@38.9734813,-95
 
 <!-- Introduction -->
 
-<div style="float: right; margin-left: 22px; margin-bottom: 10px; max-width: 100%; text-align: center;">
-  <img class="profile-img img-responsive" src="/assets/img/avatar_2.jpeg" alt="Profile Image" style="width: 300px; height: auto; max-width: 100%; border-radius: 8px;">
+<style>
+  .about-photo { float: right; margin: 0 0 10px 22px; text-align: center; }
+  .about-photo img { width: 300px; height: auto; max-width: 100%; border-radius: 8px; }
+  @media (max-width: 767px) {
+    .about-photo { float: none; margin: 0 auto 1.25rem; }
+    .about-photo img { width: 220px; }
+  }
+</style>
+<div class="about-photo">
+  <img class="profile-img img-responsive" src="/assets/img/avatar_2.jpeg" alt="Profile Image">
 </div>
 
 
   <p>
-  I recently completed my PhD in geology at the University of Kansas, advised by Dr. Mike Blum. My dissertation traces sand from the Himalayas to the Bengal Fan thousands of kilometers away in the Indian Ocean, reconstructing the dynamic of Earth's largest sediment dispersal system over the past several hundred thousand years.
+  I recently completed my PhD in geology at the University of Kansas, advised by Dr. Mike Blum. I am a quantitative sedimentologist, and my work combines detailed core description with new applications of geochronology. My dissertation focuses on the Bengal Fan, Earth's largest submarine fan, built from Himalayan sediment carried by the Ganges and Brahmaputra rivers. In deep-sea cores drilled nearly 1,400 km from the shelf edge, I described more than 1,000 sediment gravity flow deposits bed by bed. Because bed-scale data like these come mostly from confined basins, the dataset offers a baseline for how flows in an unconfined fan partition sand and mud. Among these deposits, rare meters-thick sand beds account for nearly half of the total thickness. Coarse sand has little reason to travel this far, so these beds likely record unusually powerful events. Yet their timing was known only indirectly from the surrounding mud. Using luminescence, a method still rarely applied to deep-sea sediments, I dated the sands themselves and extended direct ages beyond the reach of radiocarbon. These ages now anchor a source-to-sink synthesis that tests how Himalayan climate signals travel to the deep sea, and how much of that history the fan preserves.
   </p>
 
   <p>
-  Through my PhD I developed a broad geoscience skill set. I describe and interpret deep-sea sediment cores from IODP Expedition 354 on the Bengal Fan, then date them using multiple geochronology methods: radiocarbon for the most recent deposits, infrared stimulated luminescence (IRSL) for sandy beds beyond the radiocarbon limit, and detrital zircon U-Pb analysis to fingerprint the provenance of these sands in the deep sea. Beyond cores, I use well-log data for basin-scale property mapping and petrophysical calculations, and interpret 3D seismic volumes to characterize subsurface geology.
-  </p>
-
-  <p>
-  I am equally drawn to the quantitative side of this work. During core description, for example, I recognized two distinct flavors of turbidites but needed to upgrade from qualitative observation to quantitative classification. Unsupervised machine learning let me do that across nearly 1,000 turbidites in the Bengal Fan. The same mindset drives my computer vision work (an open-sourced deep learning pipeline for mineral grain segmentation) and the data tools I built during industry internships at Oxy and Civitas Resources to guide well placement and completion design.
-  </p>
-
-  <p>
-  I am genuinely passionate about building automated workflows and mining insights from geological data. I am looking for roles where I can bring this combination of geoscience and data science to high-impact problems in exploration, energy, climate, or environmental science.
+  Alongside my PhD, I completed geology internships at Oxy and Civitas Resources, where I built Python and Spotfire tools that integrate well, seismic, and microseismic data to guide well placement and completion design. I like building things with code, from data workflows in research and industry to small iPhone and Mac apps in my spare time. Now I am looking for roles that bring geoscience and data science together in exploration, energy, climate, or environmental science.
   </p>
 
 <!-- Apps -->
