@@ -19,6 +19,24 @@
     - /assets/img/apps/stillsand-shot-3.jpg
     - /assets/img/apps/stillsand-shot-4.jpg
 
+
+- name: QuoteSight
+  tagline: See the real sentence that backs up your claim
+  icon: /assets/img/apps/quotesight-icon.png
+  platforms: [Mac, Windows]
+  description: >
+    Local semantic search over your PDF library for researchers. It indexes
+    your papers by keyword and by meaning, so an AI agent (Claude Code or
+    Codex) can take a half-formed argument and find the sentences that support
+    or refute it. Each quote opens on its PDF page with the sentence
+    highlighted, and quotes that do not match the PDF text are flagged as
+    unverified.
+  tags: [Free, Open source, Local index, Python]
+  links:
+    - label: GitHub
+      icon: fa-brands fa-github
+      url: https://github.com/ZJ-Gao/QuoteSight
+
 - name: WaveScribe
   tagline: Offline dictation for English and Mandarin
   icon: /assets/img/apps/wavescribe-icon.png
@@ -36,3 +54,4 @@
     - label: Download
       icon: fa-solid fa-download
       url: https://github.com/ZJ-Gao/WaveScribe/releases/latest
+
