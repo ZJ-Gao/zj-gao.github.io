@@ -37,23 +37,6 @@
       icon: fa-brands fa-github
       url: https://github.com/ZJ-Gao/QuoteSight
 
-- name: ReadBuddy
-  tagline: Read English books the way you binge a show
-  icon: /assets/img/apps/readbuddy-icon.png
-  platforms: [Mac, iPad]
-  description: >
-    For readers who want to read English books (EPUB and PDF) in the original
-    with help close at hand. Claude prepares an introduction to the book, a
-    close reading of each chapter that marks its core and most interesting
-    passages, and a paragraph-by-paragraph Chinese translation you can toggle
-    on and off. Highlights and notes stay in local folders and sync between
-    the Mac and the iPad.
-  tags: [Free, Noncommercial, Claude Code, Python]
-  links:
-    - label: GitHub
-      icon: fa-brands fa-github
-      url: https://github.com/ZJ-Gao/ReadBuddy
-
 - name: WaveScribe
   tagline: Offline dictation for English and Mandarin
   icon: /assets/img/apps/wavescribe-icon.png
